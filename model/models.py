@@ -7,9 +7,9 @@ class Cuenta():
         # Si el saldo es mayor o igial al monto se debita el monto de la cuenta origen
         # y se deposita el monto de la cuenta destino
         #
-
-        if not self.tieneSaldoSuficiente(monto):
-            pass
+        if not self.esMontoValido(monto):
+            if not self.tieneSaldoSuficiente(monto):
+                return
         self.debitar(monto)
         cuentaDestino.acreditar(monto)
 
@@ -24,3 +24,6 @@ class Cuenta():
 
     def obtenerSaldo(self):
         return self.saldo
+
+    def esMontoValido(self, monto):
+        return monto > 0

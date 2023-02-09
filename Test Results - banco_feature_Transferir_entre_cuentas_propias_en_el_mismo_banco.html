@@ -572,9 +572,9 @@ jQuery.cookie = function(name, value, options) {
     <body>
         <div id="container">
             <div id="header">
-                <div class="time" xmlns="">1 ms</div>
+                <div class="time" xmlns="">0 ms</div>
                 <h1>
-                    banco.feature:Transferir entre cuentas propias en el mismo banco: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">4 total, </span><span class="passed">4 passed</span></strong>
+                    banco.feature:Transferir entre cuentas propias en el mismo banco: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">19 total, </span><span class="failed">3 failed, </span><span class="ignored">9 ignored, </span><span class="passed">7 passed</span></strong>
                 </h1>
                 <div id="treecontrol">
                     <ul>
@@ -591,35 +591,163 @@ jQuery.cookie = function(name, value, options) {
             </div>
             <div id="content">
                 <ul id="tree">
-                    <li xmlns="" class="level top open">
+                    <li xmlns="" class="level top failed open">
                         <span><em class="time">
-                                <div class="time">1 ms</div>
+                                <div class="time">0 ms</div>
                             </em>Transferencia bancaria</span>
                         <ul>
                             <li class="level suite open">
                                 <span><em class="time">
-                                        <div class="time">1 ms</div>
+                                        <div class="time">0 ms</div>
                                     </em>Transferir entre cuentas propias en el mismo banco</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
                                                 <div class="time">0 ms</div>
-                                            </em><em class="status">passed</em>Dado que tengo una cuenta de origen y una de destino con $50, cada una,en el mismo banco</span>
+                                            </em><em class="status">passed</em>Dado que tengo una cuenta de origen y una de destino con '50.0', cada una,en el mismo banco</span>
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
                                                 <div class="time">0 ms</div>
-                                            </em><em class="status">passed</em>Cuando realizo una transferencia de un monto $50 de la cuenta origen a la cuenta de destino</span>
-                                    </li>
-                                    <li class="level test">
-                                        <span><em class="time">
-                                                <div class="time">1 ms</div>
-                                            </em><em class="status">passed</em>Entonces el saldo de la cuenta destino se incrementara a $100</span>
+                                            </em><em class="status">passed</em>Cuando realizo una transferencia de un monto '50.0' de la cuenta origen a la cuenta de destino</span>
                                     </li>
                                     <li class="level test">
                                         <span><em class="time">
                                                 <div class="time">0 ms</div>
-                                            </em><em class="status">passed</em>Y se decrementa a $0 la cuenta origen</span>
+                                            </em><em class="status">passed</em>Entonces el saldo de la cuenta destino se incrementara a '100.0'</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">Saldo:  100.0<br/></span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">passed</em>Y se decrementa a '0.0' la cuenta origen</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="level suite open">
+                                <span><em class="time">
+                                        <div class="time">0 ms</div>
+                                    </em>Transferir entre cuentas propias en el mismo banco</span>
+                                <ul>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">passed</em>Dado que tengo una cuenta de origen y una de destino con '50.0', cada una,en el mismo banco</span>
+                                    </li>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">passed</em>Cuando realizo una transferencia de un monto '100.0' de la cuenta origen a la cuenta de destino</span>
+                                    </li>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">passed</em>Entonces el saldo de la cuenta destino se incrementara a '50.0'</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stdout">Saldo:  50.0<br/></span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="level suite failed open">
+                                <span><em class="time">
+                                        <div class="time">0 ms</div>
+                                    </em>Transferir entre cuentas propias en el mismo banco -- @1.1 transferencia</span>
+                                <ul>
+                                    <li class="level test failed open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">failed</em>Dado que tengo una cuenta de origen y una de destino con "50.0", cada una,en el mismo banco</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stderr">Undefined<br/></span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="level test ignored open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>Cuando realizo una transferencia de un monto "50.0" de la cuenta origen a la cuenta de destino</span>
+                                    </li>
+                                    <li class="level test ignored open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>Entonces el saldo de la cuenta destino se incrementara a "0.0"</span>
+                                    </li>
+                                    <li class="level test ignored open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>Y se decrementa a "100.0" la cuenta origen</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="level suite failed open">
+                                <span><em class="time">
+                                        <div class="time">0 ms</div>
+                                    </em>Transferir entre cuentas propias en el mismo banco -- @1.2 transferencia</span>
+                                <ul>
+                                    <li class="level test failed open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">failed</em>Dado que tengo una cuenta de origen y una de destino con "50.0", cada una,en el mismo banco</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stderr">Undefined<br/></span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="level test ignored open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>Cuando realizo una transferencia de un monto "100.0" de la cuenta origen a la cuenta de destino</span>
+                                    </li>
+                                    <li class="level test ignored open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>Entonces el saldo de la cuenta destino se incrementara a "50.0"</span>
+                                    </li>
+                                    <li class="level test ignored open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>Y se decrementa a "50.0" la cuenta origen</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="level suite failed open">
+                                <span><em class="time">
+                                        <div class="time">0 ms</div>
+                                    </em>Transferir entre cuentas propias en el mismo banco -- @1.3 transferencia</span>
+                                <ul>
+                                    <li class="level test failed open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">failed</em>Dado que tengo una cuenta de origen y una de destino con "50.0", cada una,en el mismo banco</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stderr">Undefined<br/></span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="level test ignored open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>Cuando realizo una transferencia de un monto "-100.0" de la cuenta origen a la cuenta de destino</span>
+                                    </li>
+                                    <li class="level test ignored open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>Entonces el saldo de la cuenta destino se incrementara a "50.0"</span>
+                                    </li>
+                                    <li class="level test ignored open">
+                                        <span><em class="time">
+                                                <div class="time">0 ms</div>
+                                            </em><em class="status">ignored</em>Y se decrementa a "50.0" la cuenta origen</span>
                                     </li>
                                 </ul>
                             </li>
@@ -629,7 +757,7 @@ jQuery.cookie = function(name, value, options) {
             </div>
         </div>
         <div id="footer">
-            <p>Generated by PyCharm on 1/5/23, 9:03 AM</p>
+            <p>Generated by PyCharm on 1/6/23, 8:46 AM</p>
         </div>
     </body>
 </html>
